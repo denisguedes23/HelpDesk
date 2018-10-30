@@ -1,17 +1,19 @@
 package com.helpdesk;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
 public class teste {
 	
 	public static void main(String[] args) {
-		Map<String, Object> param = new HashMap<>();
-		param.put("matricula", 23232);
+		Date date = new Date();
 		
-		for(Map.Entry<String, Object> pa : param.entrySet()) {
-			System.out.println(pa.getValue());
-		}
+		Calendar c = Calendar.getInstance();
+		c.add(Calendar.DAY_OF_YEAR, 1);
+		
+		System.out.println(c.getTime());
 	}
 
 }
